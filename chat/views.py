@@ -14,26 +14,30 @@ def register(request):
 		print "进入注册","tt"
 		uid = rand()
 		print uid,"uid是"
-		name = request.POST.get('name','')
+		name = request.POST.get('name','').encode('utf-8')
 		password = request.POST.get('password','')
 		email = request.POST.get('email','')
-		tel = request.POST.get('tel','')
-		register_date = request.POST.get('register_date','')
-		print "tt",name,password,email,tel,register_date
-		userObj = t_user_info(
-			user_id = uid,
-			user_name = name,
-			user_password = password,
-			user_sex = '1',
-			user_age = '20',
-			user_birthday = '2000-05-05',
-			user_mail = email,
-			user_area = '北京',
-			user_register_date = register_date,
-			user_tel = tel)
-		userObj.save()
-		print "注册成功"
-		return HttpResponse(uid)
+		try:
+			obj = t_user_info.objects.get(user_mail = email)
+			return HttpResponse("used")
+		except t_user_info.DoesNotExist:
+			tel = request.POST.get('tel','')
+			register_date = request.POST.get('register_date','')
+			print "tt",name,password,email,tel,register_date
+			userObj = t_user_info(
+				user_id = uid,
+				user_name = name,
+				user_password = password,
+				user_sex = '1',
+				user_age = '20',
+				user_birthday = '2000-05-05',
+				user_mail = email,
+				user_area = '北京',
+				user_register_date = register_date,
+				user_tel = tel)
+			userObj.save()
+			print "注册成功"
+			return HttpResponse(uid)	
 	return HttpResponse('服务器错误')
 
 #登陆验证
