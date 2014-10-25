@@ -1,0 +1,404 @@
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 07:26:12] "GET /chat/register HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 07:26:40] "GET /chat/register HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 07:27:23] "GET /chat/register HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 07:27:50] "GET /chat/register HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/SocketServer.py", line 570, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.6/SocketServer.py", line 332, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.6/site-packages/django/core/servers/basehttp.py", line 136, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.6/SocketServer.py", line 627, in __init__
+    self.handle()
+  File "/usr/lib/python2.6/wsgiref/simple_server.py", line 130, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.6/socket.py", line 450, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Error: That port is already in use.
+Error: That port is already in use.
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 07:32:30] "GET /chat/register HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/SocketServer.py", line 570, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.6/SocketServer.py", line 332, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.6/site-packages/django/core/servers/basehttp.py", line 136, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.6/SocketServer.py", line 627, in __init__
+    self.handle()
+  File "/usr/lib/python2.6/wsgiref/simple_server.py", line 130, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.6/socket.py", line 450, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:22] "GET / HTTP/1.0" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "GET /robots.txt HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "GET / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "GET / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "GET http://www.google.com HTTP/1.0" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "HEAD http://www.google.com HTTP/1.0" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:39] "CONNECT www.google.com:80 HTTP/1.0" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "GET /.git/HEAD HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:40] "OPTIONS / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:20:44] "GET / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python2.6/site-packages/django/contrib/staticfiles/handlers.py", line 72, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 180, in __call__
+    self.load_middleware()
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/lib/python2.6/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[25/Oct/2014 08:29:17] "GET /chat/register HTTP/1.1" 500 59
+Validating models...
+
+0 errors found
+October 25, 2014 - 07:25:32
+Django version 1.6b1, using settings 'chatPro.settings'
+Starting development server at http://121.40.179.38:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('221.212.116.27', 27069)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('221.212.116.27', 45635)
+----------------------------------------
