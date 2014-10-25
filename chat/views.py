@@ -14,7 +14,7 @@ def register(request):
 		print "进入注册","tt"
 		uid = rand()
 		print uid,"uid是"
-		name = request.POST.get('name','')
+		name = request.POST.get('name','').encode('utf-8')
 		password = request.POST.get('password','')
 		email = request.POST.get('email','')
 		tel = request.POST.get('tel','')
