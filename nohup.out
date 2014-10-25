@@ -389,3 +389,16 @@ Traceback (most recent call last):
     error_prefix, module_path, class_name))
 ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
 [25/Oct/2014 08:29:17] "GET /chat/register HTTP/1.1" 500 59
+Validating models...
+
+0 errors found
+October 25, 2014 - 07:25:32
+Django version 1.6b1, using settings 'chatPro.settings'
+Starting development server at http://121.40.179.38:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('221.212.116.27', 27069)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('221.212.116.27', 45635)
+----------------------------------------
