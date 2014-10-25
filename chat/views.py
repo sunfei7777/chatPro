@@ -54,7 +54,7 @@ def loginValidate(request):
 				return HttpResponse('登陆成功')
 			except t_user_info.DoesNotExist:
 				return HttpResponse('chat号与密码不匹配！请确认后再输入！')
-	
+	return HttpResponse('坤哥滚蛋！')
 
 #生成数据库中没有的六位整数
 def rand():

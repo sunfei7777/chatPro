@@ -62,9 +62,9 @@ class t_user_group(models.Model):
 心情
 '''
 
-class t_user_group(models.Model):
+class t_user_xinqing(models.Model):
 	user_id = models.ForeignKey(t_user_info,verbose_name="用户账号")
-	user_speak = models.CharField(max_length=512,verbose_name='群',null=True)
+	user_xinqing = models.CharField(max_length=512,verbose_name='群',null=True)
 	def __unicode__(self):
 		return self.user_id
 
