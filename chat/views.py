@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response,render
 from django.http import HttpResponse,HttpResponseRedirect
 from django.core.mail import EmailMultiAlternatives   
-from chat.models import t_user_info
+from chat.models import t_user_info,t_user_friend
 import random
 import re
 
@@ -72,3 +72,16 @@ def rand():
 			except t_user_info.DoesNotExist:
 				return uid
 
+#检索好友列表
+def searchFriend(request):
+	if request.method == 'POST':
+		user_mail = request.POST.get('uid_mail','')
+		print user_mail
+		if "@" in user_mail:
+			try:
+				obj = t_user_info.objects.get(user_mail = user_mail)
+				uid = obj.user_id
+				obj_friend = t_user_friend.objects.get(user_id = uid)
+			return HttpResponse(obj_friend)
+			except t_user_info.DoesNotExist:
+				return HttpResponse("请求出错")
