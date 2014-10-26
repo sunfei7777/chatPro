@@ -83,7 +83,7 @@ def searchFriend(request):
 				obj = t_user_info.objects.get(user_mail = user_mail)
 				uid = obj.user_id
 				obj_friend = t_user_friend.objects.get(user_id = uid)
-				return HttpResponse(obj.user_area)
+				return HttpResponse("时空吗")
 			except t_user_info.DoesNotExist:
 				return HttpResponse("请求出错")
 		else:
