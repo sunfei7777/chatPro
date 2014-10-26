@@ -74,6 +74,7 @@ def rand():
 
 #检索好友列表
 def searchFriend(request):
+	print "进入搜索好友列表"
 	if request.method == 'POST':
 		user_mail = request.POST.get('uid_mail','')
 		print user_mail
@@ -85,3 +86,5 @@ def searchFriend(request):
 				return HttpResponse(obj.user_area)
 			except t_user_info.DoesNotExist:
 				return HttpResponse("请求出错")
+		else
+			return HttpResponse("输入的是chat号")
