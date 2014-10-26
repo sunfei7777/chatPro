@@ -86,5 +86,5 @@ def searchFriend(request):
 				return HttpResponse(obj.user_area)
 			except t_user_info.DoesNotExist:
 				return HttpResponse("请求出错")
-		else
+		else:
 			return HttpResponse("输入的是chat号")
