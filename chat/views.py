@@ -77,9 +77,10 @@ def searchFriend(request):
 	print "进入搜索好友列表"
 	if request.method == 'POST':
 		user_mail = request.POST.get('uid_mail','')
-		print user_mail
+		print "到这里了",user_mail
 		if '@' in user_mail:
 			try:
+				print "进入try"
 				obj = t_user_info.objects.get(user_mail = user_mail)
 				uid = obj.user_id
 				obj_friend = t_user_friend.objects.get(user_id = uid)
