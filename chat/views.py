@@ -78,7 +78,7 @@ def searchFriend(request):
 	if request.method == 'POST':
 		user_mail = request.POST.get('uid_mail','')
 		print user_mail
-		if "@" in user_mail:
+		if '@' in user_mail:
 			try:
 				obj = t_user_info.objects.get(user_mail = user_mail)
 				uid = obj.user_id
