@@ -89,3 +89,5 @@ def searchFriend(request):
 				return HttpResponse("请求出错")
 		else:
 			return HttpResponse("输入的是chat号")
+	else:
+		return HttpResponse("不可能不是post吧")
