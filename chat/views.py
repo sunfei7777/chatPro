@@ -135,7 +135,7 @@ def addSearchFriend(request):
 	else:
 		objects = t_user_info.objects.all()
 		for obj in objects:
-			
+			offer_obj = {}
 			offer_obj['name'] = obj.user_name
 			offer_obj['chatNum'] = obj.user_id
 			try:
