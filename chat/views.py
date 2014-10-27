@@ -85,9 +85,13 @@ def searchFriend(request):
 				print "第一步搜索结果：",obj.user_area
 				uid = obj.user_id
 				print "第er步搜索结果：",uid
-				obj_friend = t_user_friend.objects.get(user_id = uid)
-				print "第er步搜索结果：",obj_friend
-				return HttpResponse("时空吗")
+				try:
+					obj_friend = t_user_friend.objects.get(user_id = uid)
+					print "第er步搜索结果：",obj_friend
+					return HttpResponse(obj_friend)
+				except:
+					print "未搜索到好友"
+					return HttpResponse("该用户没有好友")
 			except t_user_info.DoesNotExist:
 				return HttpResponse("请求出错")
 		else:
