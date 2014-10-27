@@ -141,7 +141,7 @@ def addSearchFriend(request):
 			try:
 				objxinqing = t_user_xinqing.objects.get(user_id = obj.user_id)
 			except:
-				objxinqing["user_xinqing"] = ""
+				objxinqing["user_xinqing"] = "我还没有添加心情噢"
 			offer_obj['xinqing'] = objxinqing["user_xinqing"]
 			context_order_objs.append(offer_obj)
 		return HttpResponse(json.dumps(context_order_objs),content_type="application/json")
