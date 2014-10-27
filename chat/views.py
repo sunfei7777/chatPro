@@ -133,7 +133,11 @@ def addSearchFriend(request):
 			except:
 				return HttpResponse("无此用户信息")
 	else:
-		objects = t_user_info.objects.all()
+		uidOrMail = request.GET.get('uid_mail','')
+		if '@' in uidOrMail:
+			objects = t_user_info.objects.get(user_mail = uidOrMail)
+			uidOrMail = objects.user_id
+		objects = t_user_info.objects.exclude(user_id = uidOrMail)[:5]
 		for obj in objects:
 			offer_obj = {}
 			offer_obj['name'] = obj.user_name
