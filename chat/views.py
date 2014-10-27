@@ -84,7 +84,7 @@ def searchFriend(request):
 				obj = t_user_info.objects.get(user_mail = user_mail)
 				print "第一步搜索结果：",obj.user_area
 				uid = obj.user_id
-				print "第er步搜索结果：",obj
+				print "第er步搜索结果：",uid
 				obj_friend = t_user_friend.objects.get(user_id = uid)
 				print "第er步搜索结果：",obj_friend
 				return HttpResponse("时空吗")
