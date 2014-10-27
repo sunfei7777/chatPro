@@ -76,6 +76,7 @@ def rand():
 #检索好友列表
 def searchFriend(request):
 	print "进入搜索好友列表"
+	objxinqing = {}
 	if request.method == 'POST':
 		user_mail = request.POST.get('uid_mail','')
 		if '@' in user_mail:
