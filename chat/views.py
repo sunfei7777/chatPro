@@ -105,6 +105,7 @@ def searchFriend(request):
 def addSearchFriend(request):
 	print "添加好友——-进入搜索好友列表"
 	context_order_objs = []
+	objxinqing = {}
 	if request.method == 'POST':
 		user_mail = request.POST.get('uid_mail','')
 		print "到这里了",user_mail
@@ -134,7 +135,7 @@ def addSearchFriend(request):
 	else:
 		objects = t_user_info.objects.all()
 		for obj in objects:
-			offer_obj = {}
+			
 			offer_obj['name'] = obj.user_name
 			offer_obj['chatNum'] = obj.user_id
 			try:
