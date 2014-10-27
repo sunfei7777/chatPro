@@ -108,8 +108,8 @@ def addSearchFriend(request):
 	context_order_objs = []
 	objxinqing = {}
 	if request.method == 'POST':#如果为post方法，post是查询单个好友信息的，可以输入邮箱号或者chatid
-		uidOrMail = request.POST.get('uid_mail','')#获取提交到的信息
-		print "到这里了",user_mail
+		uidOrMail = request.POST.get('uidOrMail','')#获取提交到的信息
+		print "到这里了",uidOrMail
 		if '@' in uidOrMail:#判断是邮箱还是chatid
 			try:#如果是邮箱的话进行chatid的搜索工作
 				print "进入try"
@@ -137,7 +137,7 @@ def addSearchFriend(request):
 			return HttpResponse("系统错误")							
 
 	else:
-		uidOrMail = request.GET.get('uid_mail','')
+		uidOrMail = request.GET.get('uidOrMail','')
 		if '@' in uidOrMail:
 			objects = t_user_info.objects.get(user_mail = uidOrMail)
 			uidOrMail = objects.user_id
