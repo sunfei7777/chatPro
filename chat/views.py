@@ -78,26 +78,27 @@ def searchFriend(request):
 	print "进入搜索好友列表"
 	objxinqing = {}
 	if request.method == 'POST':
-		user_mail = request.POST.get('uid_mail','')
-		if '@' in user_mail:
+		uid = request.POST.get('uid_mail','')
+		if '@' in uid:
 			try:
-				obj = t_user_info.objects.get(user_mail = user_mail)
+				obj = t_user_info.objects.get(user_mail = uid)
 				uid = obj.user_id
-				try:
-					obj_friend = t_user_friend.objects.get(user_id = uid)
-					return HttpResponse(obj_friend)
-				except:
-					print "未搜索到好友"
-					return HttpResponse("该用户没有好友")
 			except t_user_info.DoesNotExist:
-				return HttpResponse("请求出错")
-		else:
-			try:
-				obj = t_user_info.objects.get(user_id = user_mail)
-				return HttpResponse(obj)
-			except t_user_info.DoesNotExist:
-				return HttpResponse("该用户没有好友")
-			return HttpResponse("输入的是chat号")
+				return HttpResponse("请求出错")	
+		try:
+			obj_friend = t_user_friend.objects.get(user_id = uid)
+			return HttpResponse(obj_friend)
+		except:
+			print "未搜索到好友"
+			return HttpResponse("该用户没有好友")
+						
+		# else:
+		# 	try:
+		# 		obj = t_user_info.objects.get(user_id = user_mail)
+		# 		return HttpResponse(obj)
+		# 	except t_user_info.DoesNotExist:
+		# 		return HttpResponse("该用户没有好友")
+		# 	return HttpResponse("输入的是chat号")
 	else:
 		return HttpResponse("不可能不是post吧")
 
