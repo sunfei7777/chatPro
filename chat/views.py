@@ -128,11 +128,14 @@ def addSearchFriend(request):
 			try:#把心情提取出来，封装到一起
 				objxinqing = t_user_xinqing.objects.get(user_id = obj.user_id)
 				offer_obj['xinqing'] = objxinqing["user_xinqing"]
-				return HttpResponse(json.dumps(offer_obj),content_type="application/json")
+				print offer_obj
+				context_order_objs.append(offer_obj)
+				return HttpResponse(json.dumps(context_order_objs),content_type="application/json")
 			except:#若果没有心情记录则添加"我还没有添加心情噢"
 				objxinqing["user_xinqing"] = "我还没有添加心情噢"
 				offer_obj['xinqing'] = objxinqing["user_xinqing"]
-				return HttpResponse(json.dumps(offer_obj),content_type="application/json")
+				context_order_objs.append(offer_obj)
+				return HttpResponse(json.dumps(context_order_objs),content_type="application/json")
 		except:
 			return HttpResponse("系统错误")							
 
