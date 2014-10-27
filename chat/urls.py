@@ -10,4 +10,6 @@ urlpatterns = patterns('',
     url(r'^/register$', views.register, name='register'),
     url(r'^/loginValidate$', views.loginValidate, name='loginValidate'),
     url(r'^/searchFriend$', views.searchFriend, name='searchFriend'),
+    url(r'^/addSearchFriend$', views.addSearchFriend, name='addSearchFriend'),
+    
 )

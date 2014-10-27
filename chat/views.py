@@ -3,9 +3,10 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response,render
 from django.http import HttpResponse,HttpResponseRedirect
 from django.core.mail import EmailMultiAlternatives   
-from chat.models import t_user_info,t_user_friend
+from chat.models import t_user_info,t_user_friend,t_user_xinqing
 import random
 import re
+import simplejson as json
 
 #注册
 def register(request):
@@ -77,6 +78,34 @@ def searchFriend(request):
 	print "进入搜索好友列表"
 	if request.method == 'POST':
 		user_mail = request.POST.get('uid_mail','')
+		if '@' in user_mail:
+			try:
+				obj = t_user_info.objects.get(user_mail = user_mail)
+				uid = obj.user_id
+				try:
+					obj_friend = t_user_friend.objects.get(user_id = uid)
+					return HttpResponse(obj_friend)
+				except:
+					print "未搜索到好友"
+					return HttpResponse("该用户没有好友")
+			except t_user_info.DoesNotExist:
+				return HttpResponse("请求出错")
+		else:
+			try:
+				obj = t_user_info.objects.get(user_id = user_mail)
+				return HttpResponse(obj)
+			except t_user_info.DoesNotExist:
+				return HttpResponse("该用户没有好友")
+			return HttpResponse("输入的是chat号")
+	else:
+		return HttpResponse("不可能不是post吧")
+
+#添加好友时检索用户列表
+def addSearchFriend(request):
+	print "添加好友——-进入搜索好友列表"
+	context_order_objs = []
+	if request.method == 'POST':
+		user_mail = request.POST.get('uid_mail','')
 		print "到这里了",user_mail
 		if '@' in user_mail:
 			try:
@@ -88,13 +117,29 @@ def searchFriend(request):
 				try:
 					obj_friend = t_user_friend.objects.get(user_id = uid)
 					print "第er步搜索结果：",obj_friend
-					return HttpResponse(obj_friend)
+					return HttpResponse("已经是好友")
 				except:
-					print "未搜索到好友"
-					return HttpResponse("该用户没有好友")
+					return HttpResponse("系统错误")
 			except t_user_info.DoesNotExist:
-				return HttpResponse("请求出错")
+				return HttpResponse("无此用户信息")
 		else:
-			return HttpResponse("输入的是chat号")
+			try:
+				print "进入try"
+				obj = t_user_info.objects.get(user_id = user_mail)
+				print "第一步搜索结果：",obj.user_name
+				return HttpResponse("搜索到好友昵称为：",obj.user_name)
+			except:
+				return HttpResponse("无此用户信息")
 	else:
-		return HttpResponse("不可能不是post吧")
+		objects = t_user_info.objects.all()
+		for obj in objects:
+			offer_obj = {}
+			offer_obj['name'] = obj.user_name
+			offer_obj['chatNum'] = obj.user_id
+			try:
+				objxinqing = t_user_xinqing.objects.get(user_id = obj.user_id)
+			except:
+				objxinqing["user_xinqing"] = ""
+			offer_obj['xinqing'] = objxinqing.user_xinqing
+			context_order_objs.append(offer_obj)
+		return HttpResponse(json.dumps(context_order_objs),content_type="application/json")
