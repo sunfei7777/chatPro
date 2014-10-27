@@ -102,36 +102,40 @@ def searchFriend(request):
 		return HttpResponse("不可能不是post吧")
 
 #添加好友时检索用户列表
+#尼玛，这函数写的我都凌乱了，必须添加点注释啦！！o(╯□╰)o
 def addSearchFriend(request):
 	print "添加好友——-进入搜索好友列表"
 	context_order_objs = []
 	objxinqing = {}
-	if request.method == 'POST':
-		user_mail = request.POST.get('uid_mail','')
+	if request.method == 'POST':#如果为post方法，post是查询单个好友信息的，可以输入邮箱号或者chatid
+		uidOrMail = request.POST.get('uid_mail','')#获取提交到的信息
 		print "到这里了",user_mail
-		if '@' in user_mail:
-			try:
+		if '@' in uidOrMail:#判断是邮箱还是chatid
+			try:#如果是邮箱的话进行chatid的搜索工作
 				print "进入try"
-				obj = t_user_info.objects.get(user_mail = user_mail)
+				obj = t_user_info.objects.get(user_mail = uidOrMail)
 				print "第一步搜索结果：",obj.user_area
-				uid = obj.user_id
-				print "第er步搜索结果：",uid
-				try:
-					obj_friend = t_user_friend.objects.get(user_id = uid)
-					print "第er步搜索结果：",obj_friend
-					return HttpResponse("已经是好友")
-				except:
-					return HttpResponse("系统错误")
+				uidOrMail = obj.user_id#将邮箱号转为chat号
+				print "第er步搜索结果：",uidOrMail
 			except t_user_info.DoesNotExist:
 				return HttpResponse("无此用户信息")
-		else:
-			try:
-				print "进入try"
-				obj = t_user_info.objects.get(user_id = user_mail)
-				print "第一步搜索结果：",obj.user_name
-				return HttpResponse("搜索到好友昵称为：",obj.user_name)
-			except:
-				return HttpResponse("无此用户信息")
+		try:
+			obj =t_user_info.objects.get(user_id = uidOrMail)#用chatid搜索用户信息
+			print "第er步搜索结果：",obj
+			offer_obj = {}#封装成字典
+			offer_obj['name'] = obj.user_name
+			offer_obj['chatNum'] = obj.user_id
+			try:#把心情提取出来，封装到一起
+				objxinqing = t_user_xinqing.objects.get(user_id = obj.user_id)
+				offer_obj['xinqing'] = objxinqing["user_xinqing"]
+				return HttpResponse(json.dumps(offer_obj),content_type="application/json")
+			except:#若果没有心情记录则添加"我还没有添加心情噢"
+				objxinqing["user_xinqing"] = "我还没有添加心情噢"
+				offer_obj['xinqing'] = objxinqing["user_xinqing"]
+				return HttpResponse(json.dumps(offer_obj),content_type="application/json")
+		except:
+			return HttpResponse("系统错误")							
+
 	else:
 		uidOrMail = request.GET.get('uid_mail','')
 		if '@' in uidOrMail:
